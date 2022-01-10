@@ -1,0 +1,21 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{texto}}</div>
+{{else}}
+{{/each}}
+<h3>Novo aluno:</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/admin/alunos/novo" method="POST">
+        
+            <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Nome do aluno" class="form-control">
+            <label for="portugues">Português: </label>
+                <input type="text" name="portugues" id="portugues" placeholder="Nota de Português" class="form-control">
+                <br>
+                <label for="matematica">Matemática: </label>
+                <input type="text" name="matematica" id="matematica" placeholder="Nota de Matemática" class="form-control">
+                <br>
+                <button type="submit" class="btn btn-success">Criar aluno</button>
+        </form>
+    </div>
+</div>
